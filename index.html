@@ -3,10 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito Básico</title>
+    <title>Carrito Interactivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .producto {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .producto img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+        .producto button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .producto button:hover {
+            background-color: #218838;
+        }
+        .carrito {
+            padding: 20px;
+            background: #fff;
+            border-top: 2px solid #ccc;
+        }
+        .carrito h2 {
+            margin-top: 0;
+        }
+        .carrito-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .carrito-item button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .carrito-item button:hover {
+            background-color: #c82333;
+        }
+        .finalizar {
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .finalizar:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Carrito de productos</h1>
+    <h1>Tienda de Productos</h1>
+    <div class="container" id="productos"></div>
+    <div class="carrito" id="carrito">
+        <h2>Carrito</h2>
+        <div id="carrito-items"></div>
+        <h3 id="total"></h3>
+        <button class="finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
